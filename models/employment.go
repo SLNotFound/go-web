@@ -1,6 +1,6 @@
 package models
 
-type Employee struct {
+type User struct {
 	// 登录账号
 	UserLogin string `json:"userLogin"`
 	// 员工姓名
