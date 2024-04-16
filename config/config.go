@@ -19,6 +19,16 @@ type AppConfig struct {
 	Port    int    `mapstructure:"port"`
 }
 
+type MysqlConfig struct {
+	User         string `mapstructure:"user"`
+	Password     string `mapstructure:"password"`
+	Host         string `mapstructure:"host"`
+	Port         int    `mapstructure:"port"`
+	DbName       string `mapstructure:"dbname"`
+	MaxOpenConns int    `mapstructure:"max_open_conns"`
+	MaxIdleConns int    `mapstructure:"max_idle_conns"`
+}
+
 func InitConfiguration() (err error) {
 	viper.SetConfigFile("config/config.yaml")
 	err = viper.ReadInConfig()
