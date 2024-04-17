@@ -46,8 +46,9 @@ func GetAuth(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"code": code,
-		"msg":  e.GetMsg(code),
-		"data": data,
+		"success": true,
+		"code":    code,
+		"message": "登录成功",
+		"data":    data,
 	})
 }
