@@ -2,6 +2,7 @@ package models
 
 import (
 	"fmt"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 	"go-web/pkg/setting"
 	"log"
@@ -28,7 +29,7 @@ func init() {
 	dbType = sec.Key("TYPE").String()
 	dbName = sec.Key("NAME").String()
 	user = sec.Key("USER").String()
-	password = sec.Key("HOST").String()
+	password = sec.Key("PASSWORD").String()
 	host = sec.Key("HOST").String()
 	tablePrefix = sec.Key("TABLE_PREFIX").String()
 
